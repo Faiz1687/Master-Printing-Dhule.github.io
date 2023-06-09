@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    header{
+      background-color: lightseagreen;
+      padding: 30px;
+      color: white;
+      text-align: center
+    }
+    #typing-text {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  animation: typing 2s steps(40), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+    nav{
+      background-color: goldenrod;
+      padding: 10px;
+      text-align: left;
+      border-radius: 2px;
+    }
+    nav a{
+      font-size: 20px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    main{
+      margin: 40px;
+    }
+    .box{
+      background-color: slategrey;
+      padding: 60px;
+      width: 50%;
+      border-radius: 28px;
+    }
+    h6{
+      color: white;
+      text-align: center
+    }
+    p{
+      color: #333;
+      background-color: floralwhite;
+    }
+    footer{
+      background-color: #333;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+    .footer-bottom{
+      background-color: #333;
+      padding: 30px;
+    }
+        .logo img {
+      margin: 5px;
+      width: 80px;
+      height: 80px;
+      margin: 25px;
+      border-radius: 360px;
+    }
+  </style>
+</head>
+<body> 
+<header>
+  
+     <div class="logo">
+        <img src="logo1.jpg">
+  </div>
+  <h1>T-Shirt Print</h1>
+  <div id="typing-text"> </div>
+    
+  <script src="script.js"></script>
+   </header>
+   <nav>
+    <a href="#">Home</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
+ </nav> 
+ <main>
+    <h2>Welcome to Our T-Shirt Printing </h2>
+        <p>We offer custom-designed and high-quality T-shirt printing services for individuals, groups. All Printer Digital Printing, Rabber printing, Flags, T-shirt Monologo,  Poster Best Quality, Best Experience.</p>
+  
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="logo4.jpg">
+    <img src="logo3.jpg">
+    <img src="logo2.jpg">
+  </div>
+  <h2>Contact</h2>
+  <p>You can reach us at 
+    rk5727248@gmail.com or call us at 951-831-6802.</p>
+ </main>
+  <div class="footer-bottom">
+    <h6>&copy; 2023 Master Printer's. All rights reserved.</h6>
+ <script>
+   const text = "Hello Customer!"; // The text you want to animate
+const typingText = document.getElementById('typing-text');
+let i = 0;
+
+function typeWriter() {
+  if (i < text.length) {
+    typingText.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 100); // Adjust typing speed here (in milliseconds)
+  }
+}
+
+typeWriter();
+
+ </script>
+</body>
+</html>
